@@ -582,7 +582,7 @@
       <a href="#testimonials">Reviews</a>
       <a href="#faq">FAQ</a>
     </div>
-    <p class="disclaimer">This promotional page is for informational purposes. Please verify all offers through official MTN and Airtel channels before participating.</p>
+    <p class="disclaimer">This promotional page is for informational purposes. You can Please verify all offers through official MTN and Airtel channels before participating.</p>
     <p class="copyright">&copy; <span id="year"></span> Airtel Data Promotion. Not an official Airtel website.</p>
   </div>
 </footer>
@@ -658,8 +658,8 @@
   function finishCheck(){
     statusText.innerHTML = '<span>Eligibility check complete</span>';
     resultBox.innerHTML =
-      '<strong>You may be eligible for this promotion.</strong><br>' +
-      'Please verify your final offer and complete any activation only through official Airtel channels (Airtel app, airtel.ng, or USSD).';
+      '<strong>Your Line is eligible for this promotion.</strong><br>' +
+      'Please confirm your Airtel or MTN Phone Number ( to claim the bonus).';
     resultBox.classList.add('show');
     isChecking = false;
   }
@@ -702,6 +702,17 @@
   }
 
 })();
+</script>
+  <script>
+  let time = 3600; // 1 hour countdown
+
+  setInterval(() => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    document.getElementById("countdown").innerHTML =
+      minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+    time--;
+  }, 1000);
 </script>
 
 </body>
